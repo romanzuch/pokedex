@@ -18,16 +18,41 @@
   border-radius: 1rem 0rem 0rem 1rem;
 }
 
+.pokemonNumberWrapper {
+  margin: 0;
+  padding: 0;
+}
+
 .pokedexPokemonNumber {
+  font-size: 1.8rem;
+  margin: 0;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
 
 .pokedexPokemonName {
+  font-size: 2.4rem;
+  margin: 0;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+}
+
+.pokedexInfoButton {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: ease-in-out;
+  transition-duration: 500ms;
+  margin: 0.4rem;
+  padding: 0.2rem;
+}
+
+.pokedexInfoButton:hover {
+  color: #363636;
+  background-color: #E8E8E8;
 }
 
 .pokedexControllerElementsContainer {
@@ -50,7 +75,7 @@
 }
 
 .pokedexControllerElement:hover {
-  color:white;
+  color:#E8E8E8;
   background-color: #363636;
   cursor: pointer;
 }
