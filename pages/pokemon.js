@@ -36,12 +36,10 @@ export default function Pokemon(props) {
 
 export async function getServerSideProps(context) {
     let pokemonId = context.query.id;
-    let showDetails = context.query.details;
 
     return {
         props: {
             id: pokemonId || null,
-            details: showDetails || null,
         }
     }
 }
