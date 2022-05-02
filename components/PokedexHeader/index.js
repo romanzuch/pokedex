@@ -1,5 +1,5 @@
 import PokedexController from "../PokedexController";
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Header.module.css'
 
 export default function PokedexHeader() {
     return (

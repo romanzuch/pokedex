@@ -1,0 +1,11 @@
+.container {
+    padding: 0 2rem;
+}
+
+.pokedexHeader1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
