@@ -27,7 +27,7 @@ export default function PokedexController(props) {
     const router = useRouter();
 
     useEffect(() => {
-        let data = getPokemonList(pokemonId, setPokemon);
+        getPokemonList(setPokemon);
         router.push(`pokemon?id=${pokemonId}`)
     }, [update, pokemonId]);
 
@@ -47,7 +47,6 @@ export default function PokedexController(props) {
                 <Tooltip title='Info' placement='top'>
                     <InfoOutlinedIcon 
                         className={styles.pokedexInfoButton}
-                        onClick={() => {console.log(props);}}
                     />
                 </Tooltip>
             </div>
