@@ -20,7 +20,7 @@
 }
 
 .pokemonNumberWrapper {
-  margin: 0;
+  margin: 1rem;
   padding: 0;
 }
 
@@ -38,6 +38,10 @@
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+}
+
+.pokedexPokemonName::first-letter {
+  text-transform: capitalize;
 }
 
 .pokedexInfoButton {
@@ -73,6 +77,10 @@
   transition: ease-in-out;
   transition-duration: 500ms;
   margin: 0.2rem
+}
+
+.pokedexControllerElementDisabled {
+  color: #E8E8E8;
 }
 
 .pokedexControllerElement:hover {
