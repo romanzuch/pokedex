@@ -81,3 +81,5 @@ export const colors = {
     lightGray: 'E8E8E8',
     darkGray: '363636'
 }
+
+export const artworkBaseUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/'
