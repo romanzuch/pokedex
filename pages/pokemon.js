@@ -12,15 +12,20 @@ export default function Pokemon(props) {
     useEffect(() => {
         console.log(props.id);
         getPokemonDetails(props.id, setPokemon);
+        console.log(props)
     }, [update, props])
 
     return (
       <div>
         {
             pokemon ? (
-                <div className={styles.PokemonContainer}>
-                    <Image src={`${artworkBaseUrl}${pokemon.id}.png`} height={512} width={512} alt='pokémon image' />
-                </div>
+                props.details ? (
+                    <h1>Show details</h1>
+                ) : (
+                    <div className={styles.PokemonContainer}>
+                        <Image src={`${artworkBaseUrl}${pokemon.id}.png`} height={512} width={512} alt='pokémon image' />
+                    </div>
+                )
             ) : (
                 <h1 onClick={() => {console.log(pokemon)}}>no pokemon found</h1>
             )
@@ -29,12 +34,14 @@ export default function Pokemon(props) {
     )
 }
 
-export async function getServerSideProps({query}) {
-    let pokemonId = query.id;
+export async function getServerSideProps(context) {
+    let pokemonId = context.query.id;
+    let showDetails = context.query.details;
 
     return {
         props: {
             id: pokemonId || null,
+            details: showDetails || null,
         }
     }
 }
