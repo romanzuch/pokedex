@@ -1,6 +1,6 @@
 import axios from "axios";
 
-async function getPokemonList(id, setPokemon, setApiState) {
+async function getPokemonList(setPokemon) {
     let baseUrl = "https://pokeapi.co/api/v2/pokemon"
     let requstUrl = `${baseUrl}?limit=150`
     try {
