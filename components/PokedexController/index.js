@@ -21,7 +21,6 @@ export default function PokedexController({id, setId}) {
 
     useEffect(() => {
         getPokemonList(setPokemonList);
-        console.log(`id: ${id}`);
     }, [update, id]);
 
     return (
@@ -66,20 +65,31 @@ export default function PokedexController({id, setId}) {
                         </Tooltip>
                     )
                 }
-                <Tooltip title='Next' placement='bottom'>
-                    <KeyboardArrowDownIcon 
-                        fontSize='large' 
-                        className={styles.pokedexControllerElement} 
-                        onClick={() => {
-                            if (navigateNext(id)) {
-                                let newId = id + 1;
-                                setId(newId);
-                            } else {
-                                console.log(false);
-                            }
-                        }}
-                    />
-                </Tooltip>
+                {
+                    (id === 150) ? (
+                        <Tooltip title='Next' placement='bottom'>
+                            <KeyboardArrowUpIcon 
+                                fontSize='large' 
+                                className={styles.pokedexControllerElementDisabled}
+                            />
+                        </Tooltip>
+                    ) : (
+                        <Tooltip title='Next' placement='bottom'>
+                            <KeyboardArrowDownIcon 
+                                fontSize='large' 
+                                className={styles.pokedexControllerElement} 
+                                onClick={() => {
+                                    if (navigateNext(id)) {
+                                        let newId = id + 1;
+                                        setId(newId);
+                                    } else {
+                                        console.log(false);
+                                    }
+                                }}
+                            />
+                        </Tooltip>
+                    )
+                }
             </div>
         </div>
     ) 
