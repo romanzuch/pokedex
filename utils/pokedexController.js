@@ -36,4 +36,8 @@ function navigateBack(id) {
     }
 }
 
-export { navigateNext, navigateBack, getPokemonList, getPokemonDetails };
+function setBackgroundColor(type) {
+    console.log(type);
+}
+
+export { navigateNext, navigateBack, getPokemonList, getPokemonDetails, setBackgroundColor };
