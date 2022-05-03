@@ -36,7 +36,7 @@ export default function PokedexController({id, setId}) {
                     <h2 
                         className={styles.pokedexPokemonName}
                     >
-                        { pokemonList ? (<>{pokemonList.results[1].name}</>) : (<></>)}
+                        { pokemonList ? (<>{pokemonList.results[id-1].name}</>) : (<></>)}
                     </h2>
                 </div>
             </div>
