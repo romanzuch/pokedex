@@ -11,7 +11,7 @@ async function getPokemonList(setPokemon) {
         });
     } catch (e) {
         console.log(typeof(e));
-        return e;
+        console.log(e);
     }
 }
 
