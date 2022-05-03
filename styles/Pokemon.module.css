@@ -3,5 +3,47 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12rem;
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+.PokemonContainerHeader {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2rem;
+}
+
+.pokedexInfoButton {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: ease-in-out;
+    transition-duration: 500ms;
+    margin: 0.4rem;
+    padding: 0.2rem;
+}
+  
+.pokedexInfoButton:hover {
+    background-color: #363636;
+    color: #E8E8E8;
+}
+
+.pokemonDetailsView {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonDetails {
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+.pokemonImage {
+    transition: all;
+    transition-duration: 1000ms;
 }
