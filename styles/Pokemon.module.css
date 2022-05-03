@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all;
-    transition-duration: 1000ms;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .PokemonContainerHeader {
