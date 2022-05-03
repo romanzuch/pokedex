@@ -5,9 +5,10 @@ import pokemonStyles from '../styles/Pokemon.module.css';
 
 import PokedexHeader from '../components/PokedexHeader';
 
-import { getPokemonDetails } from "../utils/pokedexController";
+import { getPokemonDetails, setBackgroundColor } from "../utils/pokedexController";
 import { artworkBaseUrl } from '../utils/constants';
 import { useEffect, useState } from "react";
+import { types } from '../utils/constants';
 // tooltip
 import Tooltip from '@mui/material/Tooltip';
 // icons
@@ -20,10 +21,16 @@ export default function Home(props) {
   const [pokemonId, setPokemonId] = useState(1);
   const [update, setUpdate] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState(types.grass.color);
 
   useEffect(() => {
     getPokemonDetails(pokemonId, setPokemon);
-  }, [update, pokemonId])
+    // set the background color according to pokemon type
+    if (pokemon) { 
+      let color = types[pokemon.types[0].type.name].color;
+      setBackgroundColor(color);
+    }
+  }, [update, pokemon, backgroundColor])
 
   return (
     <div className={styles.container}>
@@ -35,7 +42,7 @@ export default function Home(props) {
 
       <PokedexHeader id={pokemonId} setId={setPokemonId} />
 
-      <div className={pokemonStyles.PokemonContainer}>
+      <div className={pokemonStyles.PokemonContainer} style={{'backgroundColor':backgroundColor}}>
             <div className={pokemonStyles.PokemonContainerHeader}>
                 {showDetails ? (
                     <Tooltip title='Hide info' placement='top'>
