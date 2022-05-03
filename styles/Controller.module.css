@@ -32,6 +32,13 @@
   -webkit-user-select: none;
 }
 
+.pokedexPokemonNameWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+}
+
 .pokedexPokemonName {
   font-size: 2.4rem;
   margin: 0;
@@ -42,22 +49,6 @@
 
 .pokedexPokemonName::first-letter {
   text-transform: capitalize;
-}
-
-.pokedexInfoButton {
-  height: 2rem;
-  width: 2rem;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition: ease-in-out;
-  transition-duration: 500ms;
-  margin: 0.4rem;
-  padding: 0.2rem;
-}
-
-.pokedexInfoButton:hover {
-  color: #363636;
-  background-color: #E8E8E8;
 }
 
 .pokedexControllerElementsContainer {
