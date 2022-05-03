@@ -1,11 +1,11 @@
 import PokedexController from "../PokedexController";
 import styles from '../../styles/Header.module.css'
 
-export default function PokedexHeader() {
+export default function PokedexHeader({id, setId}) {
     return (
-        <div className={styles.container}>
+        <div>
             <h1 className={styles.pokedexHeader1}>Pokédex</h1>
-            <PokedexController />
+            <PokedexController id={id} setId={setId} />
         </div>
     );
 }
