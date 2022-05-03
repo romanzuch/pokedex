@@ -1,15 +1,11 @@
 // styling
 import styles from '../../styles/Controller.module.css';
 
-// icons
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import InfoIcon from '@mui/icons-material/Info';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 // util functions
 import { navigateNext, navigateBack, getPokemonList } from '../../utils/pokedexController';
-import { useRouter } from 'next/router';
 
 // tooltip
 import Tooltip from '@mui/material/Tooltip';
@@ -17,42 +13,36 @@ import Tooltip from '@mui/material/Tooltip';
 // helpers
 import { useState, useEffect } from 'react';
 
-export default function PokedexController(props) {
+export default function PokedexController({id, setId}) {
 
-    const [pokemonId, setPokemonId] = useState(1); // this is used to store the id of the last pokemon
-    const [pokemon, setPokemon] = useState(0); // this is used to store the information of the pokemon
+    const [pokemonList, setPokemonList] = useState(0); // this is used to store the information of the pokemon
     const [apiState, setApiState] = useState(0); // used to fetch errors
     const [update, setUpdate] = useState(false); 
 
-    const router = useRouter();
-
     useEffect(() => {
-        getPokemonList(setPokemon);
-        router.push(`pokemon?id=${pokemonId}`)
-    }, [update, pokemonId]);
+        getPokemonList(setPokemonList);
+        console.log(`id: ${id}`);
+    }, [update, id]);
 
     return (
         <div className={styles.pokedexController}>
             <div className={styles.pokedexControllerInfo}>
                 <h2 className={styles.pokemonNumberWrapper}>
                     Nr. <span className={styles.pokedexPokemonNumber}>
-                        { pokemon ? (<>{pokemonId}</>) : (<></>) }
+                        { pokemonList ? (<>{id}</>) : (<></>) }
                         </span>
                 </h2>
-                <h2 
-                    className={styles.pokedexPokemonName}
-                >
-                    { pokemon ? (<>{pokemon.results[pokemonId-1].name}</>) : (<></>)}
-                </h2>
-                <Tooltip title='Info' placement='top'>
-                    <InfoOutlinedIcon 
-                        className={styles.pokedexInfoButton}
-                    />
-                </Tooltip>
+                <div className={styles.pokedexPokemonNameWrapper}>
+                    <h2 
+                        className={styles.pokedexPokemonName}
+                    >
+                        { pokemonList ? (<>{pokemonList.results[1].name}</>) : (<></>)}
+                    </h2>
+                </div>
             </div>
             <div className={styles.pokedexControllerElementsContainer}>
                 {
-                    (pokemonId === 1) ? (
+                    (id === 1) ? (
                         <Tooltip title='Previous' placement='top'>
                             <KeyboardArrowUpIcon 
                                 fontSize='large' 
@@ -65,9 +55,9 @@ export default function PokedexController(props) {
                                 fontSize='large' 
                                 className={styles.pokedexControllerElement} 
                                 onClick={() => {
-                                    if (navigateBack(pokemonId)) {
-                                        let newId = pokemonId -1;
-                                        setPokemonId(newId);
+                                    if (navigateBack(id)) {
+                                        let newId = id -1;
+                                        setId(newId);
                                     } else {
                                         console.log(false);
                                     }
@@ -81,9 +71,9 @@ export default function PokedexController(props) {
                         fontSize='large' 
                         className={styles.pokedexControllerElement} 
                         onClick={() => {
-                            if (navigateNext(pokemonId)) {
-                                let newId = pokemonId + 1;
-                                setPokemonId(newId);
+                            if (navigateNext(id)) {
+                                let newId = id + 1;
+                                setId(newId);
                             } else {
                                 console.log(false);
                             }
