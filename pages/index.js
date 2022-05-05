@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import pokemonStyles from '../styles/Pokemon.module.css';
 
 import PokedexHeader from '../components/PokedexHeader';
+import PokedexDetails from '../components/PokedexDetails';
 
 import { getPokemonDetails, setBackgroundColor } from "../utils/pokedexController";
 import { artworkBaseUrl } from '../utils/constants';
@@ -68,15 +69,7 @@ export default function Home(props) {
             pokemon ? (
                 showDetails ? (
                     <div className={pokemonStyles.pokemonDetailsView}>
-                        <div className={pokemonStyles.pokemonDetails}>
-                            <p>{pokemon.types[0].type.name} type</p>
-                            <p>{pokemon.weight/10} kg</p>
-                            <p>{pokemon.height/10} m</p>
-                            <p>hp {pokemon.stats[0].base_stat}</p>
-                            <p>atk {pokemon.stats[1].base_stat}</p>
-                            <p>def {pokemon.stats[2].base_stat}</p>
-                            <p>spd {pokemon.stats[5].base_stat}</p>
-                        </div>
+                        <PokedexDetails pokemon={pokemon} />
                         <Image src={`${artworkBaseUrl}${pokemon.id}.png`} height={512} width={512} alt='pokémon image' />
                     </div>
                 ) : (
