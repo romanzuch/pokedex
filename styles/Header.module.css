@@ -2,10 +2,57 @@
     padding: 0 2rem;
 }
 
-.pokedexHeader1 {
-    font-size: 3rem;
-    letter-spacing: 0.2rem;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .pokedexHeader1 {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .pokedexHeader1 {
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .pokedexHeader1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .pokedexHeader1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .pokedexHeader1 {
+        font-size: 2.6rem;
+        letter-spacing: 0.1rem;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
 }

@@ -1,13 +1,74 @@
-.PokedexDetails {
-    background-color: aliceblue;
-    padding: 1rem 3rem;
-    border-radius: 1rem;
-    outline: 1px solid #363636;
-    outline-offset: -8px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .PokedexDetails {
+        background-color: #E8E8E8;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        width: 90%;
+        outline: 1px solid #363636;
+        outline-offset: -8px;
+    }
+    .PokedexDetails td {
+        padding: 0.5rem;
+    }
 }
 
-.PokedexDetails td {
-    padding: 0.5rem;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .PokedexDetails {
+        background-color: #E8E8E8;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        width: 90%;
+        outline: 1px solid #363636;
+        outline-offset: -8px;
+    }
+    .PokedexDetails td {
+        padding: 0.5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .PokedexDetails {
+        background-color: #E8E8E8;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        width: auto;
+        outline: 1px solid #363636;
+        outline-offset: -8px;
+    }
+    .PokedexDetails td {
+        padding: 0.5rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .PokedexDetails {
+        background-color: #E8E8E8;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        outline: 1px solid #363636;
+        outline-offset: -8px;
+    }
+    .PokedexDetails td {
+        padding: 0.5rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .PokedexDetails {
+        background-color: #E8E8E8;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        outline: 1px solid #363636;
+        outline-offset: -8px;
+    }
+    .PokedexDetails td {
+        padding: 0.5rem;
+    }
 }
 
 #PokedexDetailsType::first-letter {

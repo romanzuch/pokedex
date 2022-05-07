@@ -27,8 +27,8 @@ export default function PokedexController({id, setId}) {
         <div className={styles.pokedexController}>
             <div className={styles.pokedexControllerInfo}>
                 <h2 className={styles.pokemonNumberWrapper}>
-                    Nr. <span className={styles.pokedexPokemonNumber}>
-                        { pokemonList ? (<>{id}</>) : (<></>) }
+                    <span className={styles.pokedexPokemonNumber}>
+                        { pokemonList ? (<>Nr. {id}</>) : (<></>) }
                         </span>
                 </h2>
                 <div className={styles.pokedexPokemonNameWrapper}>

@@ -1,10 +1,91 @@
-.PokemonContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1rem;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .PokemonContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    .pokemonDetailsView {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .PokemonContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    .pokemonDetailsView {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .PokemonContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .pokemonDetailsView {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .PokemonContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .pokemonDetailsView {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .PokemonContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .pokemonDetailsView {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .PokemonContainerHeader {
@@ -29,13 +110,6 @@
 .pokedexInfoButton:hover {
     background-color: #363636;
     color: #E8E8E8;
-}
-
-.pokemonDetailsView {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .pokemonDetails {
